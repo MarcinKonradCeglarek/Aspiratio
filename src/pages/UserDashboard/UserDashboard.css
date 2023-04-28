@@ -2,8 +2,32 @@
     display: flex;
     flex-direction: column ;
     gap: 32px;
+    width: 80%
 }
 
 .UserDashboard-DashboardWrapper > div {
     text-align: center;
+}
+
+.UserDashboard-horizontalStack { 
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.UserDashboard-horizontalStack > div {
+    width: 20%
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+ul > li {
+    margin: 8px;
+    padding: 8px;
+    border: 1px solid white;
 }
