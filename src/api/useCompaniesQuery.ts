@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { ApiCompany, Company } from '../types/compainy'
+import { ApiCompany, Company } from '../types/company'
 
 async function fetchCompanies() {
   return window
