@@ -1,0 +1,20 @@
+.flexLayout-maincontainer {
+    position: relative;
+    display: flex;
+    height: 100dvh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexLayout-floatingUserInformation {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    background-color: #555;
+    position: absolute;
+    padding: 8px 16px;
+    border-radius: 8px;
+    top: 16px;
+    right: 16px
+}
