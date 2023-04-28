@@ -1,8 +1,9 @@
 import { FC } from 'react'
-import { FlexLayout } from '../../components'
+import { FlexLayout, RandomNumber, Kittens } from '../../components'
 import { useCurrentUser } from '../../context/contextStore'
 import { useNavigate } from 'react-router'
 import { useCompaniesQuery } from '../../api/useCompaniesQuery'
+import './UserDashboard.css'
 
 export const UserDashboard: FC = () => {
   const currentUser = useCurrentUser()
@@ -19,12 +20,17 @@ export const UserDashboard: FC = () => {
     return c.users.includes(currentUser?.id ?? '-1')
   })
 
-  const featuresForUser = companiesForUser?.map((c) => c.features).flat()
+  const featuresForUser = companiesForUser?.map((c) => c.features).flat() ?? []
 
   return (
     <FlexLayout>
-      <div>User Dashboard</div>
-      <div>Parmissions: {featuresForUser}</div>
+      <div className="UserDashboard-DashboardWrapper">
+        <div>User Dashboard</div>
+        <div>Parmissions: {featuresForUser}</div>
+        {featuresForUser.includes('kittens') && <Kittens />}
+        {featuresForUser.includes('random-number') && <RandomNumber />}
+        {featuresForUser.includes('company') && <Kittens />}
+      </div>
     </FlexLayout>
   )
 }

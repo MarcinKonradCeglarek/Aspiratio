@@ -1,0 +1,9 @@
+.UserDashboard-DashboardWrapper {
+    display: flex;
+    flex-direction: column ;
+    gap: 32px;
+}
+
+.UserDashboard-DashboardWrapper > div {
+    text-align: center;
+}
