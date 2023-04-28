@@ -1,6 +1,13 @@
 export type ApiCompany = {
-  id: number;
-  name: string;
-  users: Array<number>;
-  features: Array<string>;
-};
+  id: string
+  name: string
+  users?: Array<string>
+  features?: Array<string>
+}
+
+export type Company = {
+  id: string
+  name: string
+  users: Array<string>
+  features: Array<string>
+}

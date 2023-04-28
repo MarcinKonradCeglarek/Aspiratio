@@ -1,15 +1,17 @@
 import { FC, useState } from 'react'
-import { useUsersQuery } from '../api/useUsersQuery'
-import { FlexLayout } from '../components/Layout'
-import { useSelectUser } from '../context/contextStore'
+import { useNavigate } from 'react-router'
+import { useUsersQuery } from '../../api/useUsersQuery'
+import { useSelectUser } from '../../context/contextStore'
+import { FlexLayout } from '../../components'
 
 export const UserSelector: FC = () => {
   const users = useUsersQuery()
   const selectUser = useSelectUser()
   const [selectedId, setSelectedId] = useState<string>('')
-
+  const navigate = useNavigate()
   const handleProceed = () => {
     selectUser(selectedId)
+    navigate('/dashboard')
   }
 
   return (
